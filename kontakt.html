@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Formularz kontaktowy</h2>
+        <form id="kontaktForm">
+          <label for="email">E-mail:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Wpisz swój email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          />
+          <small id="emailError" class="error-message"></small>
+
+          <label for="temat">Temat:</label>
+          <select id="temat" name="temat">
+            <option value="ogolny">Ogólne</option>
+            <option value="oferta">Oferta</option>
+            <option value="wsparcie">Wsparcie</option>
+          </select>
+
+          <label for="wiadomosc">Wiadomość:</label>
+          <textarea
+            id="wiadomosc"
+            name="wiadomosc"
+            placeholder="Twoja wiadomość..."
+            required
+          ></textarea>
+
+          <button type="submit">Wyślij</button>
+        </form>
+        <div id="formFeedback"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Autor: Łukasz Checiak</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

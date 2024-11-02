@@ -1,0 +1,197 @@
+/* Podstawowy reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tryb ciemny */
+body.dark-mode {
+  background-color: #333;
+  color: #f4f4f9;
+}
+
+/* Navbar */
+header nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Hero section */
+.hero {
+  padding: 50px;
+  text-align: center;
+  background-color: #e2e2e2;
+}
+
+/* Sekcja O mnie */
+.about {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Wyśrodkowanie nagłówka Galeria */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Galeria */
+.gallery .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.gallery .image-grid img,
+.gallery .image-grid video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .hero,
+  .about {
+    padding: 20px;
+  }
+}
+
+/* Stylizacja komunikatu o błędzie */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
+
+.invalid {
+  border-color: red;
+}
+
+/* Kontener główny dla formularza */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Zmniejszenie wysokości, by footer był widoczny */
+}
+
+/* Stylizacja samego formularza */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Maksymalna szerokość formularza */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+/* Styl dla guzika zmiany trybu kolorów */
+button {
+  background-color: #4caf50; /* Kolor tła guzika (zielony) */
+  color: white; /* Kolor tekstu */
+  border: none; /* Bez ramki */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  padding: 10px 15px; /* Wewnętrzne marginesy */
+  font-size: 16px; /* Rozmiar czcionki */
+  cursor: pointer; /* Wskaźnik zmienia się w kursor */
+  transition: background-color 0.3s; /* Animacja zmiany koloru tła */
+}
+
+/* Efekt po najechaniu myszką */
+button:hover {
+  background-color: #45a049; /* Ciemniejszy odcień zielonego przy najechaniu */
+}
+
+form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Stylizacja błędów */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -10px;
+}
+
+.invalid {
+  border-color: red;
+}
+
+/* Stylizacja zegara */
+.clock {
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Opcjonalnie: Stylizacja w trybie ciemnym */
+body.dark-mode .clock {
+  color: #f4f4f9;
+}
