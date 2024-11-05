@@ -1,18 +1,18 @@
-// Przełącznik trybu ciemnego
+// Funkcja do przełączania trybu ciemnego
 function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-  localStorage.setItem(
-    "dark-mode",
-    document.body.classList.contains("dark-mode")
-  );
+  const isDarkMode = document.body.classList.toggle("dark-mode");
+  document.querySelector(".hero").classList.toggle("dark-mode");
+
+  // Zapisujemy preferencję w localStorage
+  localStorage.setItem("dark-mode", isDarkMode);
 }
 
-// Wczytanie preferencji trybu ciemnego
+// Wczytanie preferencji trybu ciemnego przy załadowaniu strony
 window.onload = function () {
   if (localStorage.getItem("dark-mode") === "true") {
     document.body.classList.add("dark-mode");
+    document.querySelector(".hero").classList.add("dark-mode");
   }
-
   // Inicjalizacja zegara
   updateClock(); // Aktualizacja zaraz po załadowaniu
   setInterval(updateClock, 1000); // Aktualizacja co sekundę
