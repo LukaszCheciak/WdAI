@@ -53,6 +53,12 @@ footer {
   background-color: #e2e2e2;
 }
 
+.hero.dark-mode {
+  padding: 50px;
+  text-align: center;
+  background-color: #020000;
+}
+
 /* Sekcja O mnie */
 .about {
   padding: 20px;
